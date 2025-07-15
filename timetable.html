@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind 4.1 + Hamburger JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+ 
+<body class="min-h-screen flex flex-col bg-gray-100 text-gray-900">
+ 
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">MySite</h1>
+ 
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-600">Home</a>
+                <a href="#" class="hover:text-blue-600">About</a>
+                <a href="#" class="hover:text-blue-600">Contact</a>
+            </nav>
+ 
+            <!-- Hamburger Button -->
+            <button id="hamburger" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+ 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pr-6 pb-4 flex flex-col items-end space-y-2 text-right">
+            <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+<main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to MySite</h2>
+        <p class="text-lg md:text-xl">Responsive design with Tailwind 4.1 + JavaScript</p>
+    </section>
+ 
+    <!-- Cards Section -->
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Card One</h3>
+                <p class="text-gray-600">Clean layout with Tailwind CSS utilities.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Card Two</h3>
+                <p class="text-gray-600">Fully responsive grid with no JS required.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Card Three</h3>
+                <p class="text-gray-600">Simple and fast development experience.</p>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 shadow-inner">
+        <p>&copy; 2025 MySite. All rights reserved.</p>
+    </footer>
+ 
+    <!-- JavaScript: Toggle mobile menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+ 
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+ 
+</body>
+ 
+</html>
