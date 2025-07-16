@@ -6,7 +6,7 @@
     <title>ตารางเรียน</title>
     <link href="./src/output.css" rel="stylesheet">
     <style>
-        /* Custom styles for better readability on the timetable */
+        /* กำหนดเอง*/
         .time-slot {
             grid-row-start: var(--row-start);
             grid-row-end: var(--row-end);
@@ -18,11 +18,11 @@
     <div class="max-w-7xl mx-auto">
         <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">ตารางเรียน</h1>
 
-        <!-- Timetable for larger screens -->
+        <!-- ตารางเรียนสำหรับเว็บไซต์ -->
         <div class="hidden lg:grid grid-cols-[auto_repeat(5,1fr)] gap-px bg-gray-200 rounded-lg shadow-lg overflow-hidden">
-            <!-- Time Column -->
+            <!-- เวลาแต่ละ column -->
             <div class="bg-white p-2 font-bold text-center text-sm">เวลา</div>
-            <!-- Day Headers -->
+            <!-- วันที่ -->
             <div class="bg-white p-2 font-bold text-center text-sm">จันทร์</div>
             <div class="bg-white p-2 font-bold text-center text-sm">อังคาร</div>
             <div class="bg-white p-2 font-bold text-center text-sm">พุธ</div>
@@ -40,24 +40,32 @@
             <div class="bg-white p-2 text-center text-xs col-start-1">15:00</div>
             <div class="bg-white p-2 text-center text-xs col-start-1">16:00</div>
             <div class="bg-white p-2 text-center text-xs col-start-1">17:00</div>
+            
 
-            <!-- Grid cells for classes -->
+            <!-- ขนาดแถวGrid-->
             <div class="col-start-2 row-start-2 row-span-10 bg-gray-50"></div>
             <div class="col-start-3 row-start-2 row-span-10 bg-gray-50"></div>
             <div class="col-start-4 row-start-2 row-span-10 bg-gray-50"></div>
             <div class="col-start-5 row-start-2 row-span-10 bg-gray-50"></div>
             <div class="col-start-6 row-start-2 row-span-10 bg-gray-50"></div>
 
-            <!-- Example Classes -->
-            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 2; --row-end: 4;">
-                <p class="font-bold text-sm">Mobile First</p>
-                <p class="text-xs">CS321</p>
-                <p class="text-xs">Room 123</p>
+            <!-- ส่วนของการทำชื่อวิชาวันจันทร์ -->
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 3; --row-end: 7;">
+                <p class="font-bold text-sm text-center">10301231</p>
+                <p class="text-xs text-center">(3) 1,Lab คอม3-4</p>
+                <p class="text-xs text-center">ห้อง 105</p>
             </div>
+
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 3; --row-end: 7;">
+                <p class="font-bold text-sm text-center">10301231</p>
+                <p class="text-xs text-center">(3) 1,Lab คอม3-4</p>
+                <p class="text-xs text-center">ห้อง 105</p>
+            </div>
+
             <div class="time-slot bg-green-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 4; --row-end: 6;">
-                <p class="font-bold text-sm">Data Structures</p>
-                <p class="text-xs">CS211</p>
-                <p class="text-xs">Room 404</p>
+                <p class="font-bold text-sm text-center">Data Structures</p>
+                <p class="text-xs text-center">CS211</p>
+                <p class="text-xs text-center">Room 404</p>
             </div>
              <div class="time-slot bg-yellow-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 4; --row-start: 7; --row-end: 9;">
                 <p class="font-bold text-sm">Algorithms</p>
@@ -66,17 +74,21 @@
             </div>
         </div>
 
-        <!-- Timetable for smaller screens -->
+        <!-- Timetable สำหรับมือถือ screens -->
         <div class="lg:hidden space-y-4">
-            <!-- Monday -->
+            <!-- วันจันทร์ -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">จันทร์</h2>
-                <div class="bg-white p-4 rounded-lg shadow">
+                <div class="bg-white p-4 rounded-lg shadow mb-2">
                     <p class="font-bold">Mobile First (CS321)</p>
                     <p class="text-sm text-gray-600">08:00 - 10:00 | Room 123</p>
                 </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold">Database Systems (CS345)</p>
+                    <p class="text-sm text-gray-600">09:00 - 11:00 | Room 124</p>
+                </div>
             </div>
-            <!-- Tuesday -->
+            <!-- อังคาร -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">อังคาร</h2>
                 <div class="bg-white p-4 rounded-lg shadow">
@@ -84,7 +96,7 @@
                     <p class="text-sm text-gray-600">10:00 - 12:00 | Room 404</p>
                 </div>
             </div>
-            <!-- Wednesday -->
+            <!-- พุธ -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">พุธ</h2>
                  <div class="bg-white p-4 rounded-lg shadow">
@@ -92,12 +104,12 @@
                     <p class="text-sm text-gray-600">13:00 - 15:00 | Room 501</p>
                 </div>
             </div>
-            <!-- Thursday -->
+            <!-- พฤหัสบดี -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">พฤหัสบดี</h2>
                 <div class="bg-white p-4 rounded-lg shadow text-gray-500">ไม่มีเรียน</div>
             </div>
-            <!-- Friday -->
+            <!-- วันศุกร์ -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">ศุกร์</h2>
                 <div class="bg-white p-4 rounded-lg shadow text-gray-500">ไม่มีเรียน</div>
