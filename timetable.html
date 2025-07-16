@@ -1,15 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="th">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind 4.1 + Hamburger JS</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางเรียน</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <style>
+        /* Custom styles for better readability on the timetable */
+        .time-slot {
+            grid-row-start: var(--row-start);
+            grid-row-end: var(--row-end);
+            grid-column-start: var(--col-start);
+        }
+    </style>
 </head>
- 
-<body>
-    <p style="font-size: large;">TIMETABLE</p> 
+<body class="bg-gray-100 p-4 sm:p-6">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">ตารางเรียน</h1>
+
+        <!-- Timetable for larger screens -->
+        <div class="hidden lg:grid grid-cols-[auto_repeat(5,1fr)] gap-px bg-gray-200 rounded-lg shadow-lg overflow-hidden">
+            <!-- Time Column -->
+            <div class="bg-white p-2 font-bold text-center text-sm">เวลา</div>
+            <!-- Day Headers -->
+            <div class="bg-white p-2 font-bold text-center text-sm">จันทร์</div>
+            <div class="bg-white p-2 font-bold text-center text-sm">อังคาร</div>
+            <div class="bg-white p-2 font-bold text-center text-sm">พุธ</div>
+            <div class="bg-white p-2 font-bold text-center text-sm">พฤหัสบดี</div>
+            <div class="bg-white p-2 font-bold text-center text-sm">ศุกร์</div>
+
+            <!-- Time Slots -->
+            <div class="bg-white p-2 text-center text-xs col-start-1">08:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">09:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">10:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">11:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">12:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">13:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">14:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">15:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">16:00</div>
+            <div class="bg-white p-2 text-center text-xs col-start-1">17:00</div>
+
+            <!-- Grid cells for classes -->
+            <div class="col-start-2 row-start-2 row-span-10 bg-gray-50"></div>
+            <div class="col-start-3 row-start-2 row-span-10 bg-gray-50"></div>
+            <div class="col-start-4 row-start-2 row-span-10 bg-gray-50"></div>
+            <div class="col-start-5 row-start-2 row-span-10 bg-gray-50"></div>
+            <div class="col-start-6 row-start-2 row-span-10 bg-gray-50"></div>
+
+            <!-- Example Classes -->
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 2; --row-end: 4;">
+                <p class="font-bold text-sm">Mobile First</p>
+                <p class="text-xs">CS321</p>
+                <p class="text-xs">Room 123</p>
+            </div>
+            <div class="time-slot bg-green-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 4; --row-end: 6;">
+                <p class="font-bold text-sm">Data Structures</p>
+                <p class="text-xs">CS211</p>
+                <p class="text-xs">Room 404</p>
+            </div>
+             <div class="time-slot bg-yellow-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 4; --row-start: 7; --row-end: 9;">
+                <p class="font-bold text-sm">Algorithms</p>
+                <p class="text-xs">CS312</p>
+                <p class="text-xs">Room 501</p>
+            </div>
+        </div>
+
+        <!-- Timetable for smaller screens -->
+        <div class="lg:hidden space-y-4">
+            <!-- Monday -->
+            <div>
+                <h2 class="font-bold text-lg text-gray-700 mb-2">จันทร์</h2>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold">Mobile First (CS321)</p>
+                    <p class="text-sm text-gray-600">08:00 - 10:00 | Room 123</p>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div>
+                <h2 class="font-bold text-lg text-gray-700 mb-2">อังคาร</h2>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold">Data Structures (CS211)</p>
+                    <p class="text-sm text-gray-600">10:00 - 12:00 | Room 404</p>
+                </div>
+            </div>
+            <!-- Wednesday -->
+            <div>
+                <h2 class="font-bold text-lg text-gray-700 mb-2">พุธ</h2>
+                 <div class="bg-white p-4 rounded-lg shadow">
+                    <p class="font-bold">Algorithms (CS312)</p>
+                    <p class="text-sm text-gray-600">13:00 - 15:00 | Room 501</p>
+                </div>
+            </div>
+            <!-- Thursday -->
+            <div>
+                <h2 class="font-bold text-lg text-gray-700 mb-2">พฤหัสบดี</h2>
+                <div class="bg-white p-4 rounded-lg shadow text-gray-500">ไม่มีเรียน</div>
+            </div>
+            <!-- Friday -->
+            <div>
+                <h2 class="font-bold text-lg text-gray-700 mb-2">ศุกร์</h2>
+                <div class="bg-white p-4 rounded-lg shadow text-gray-500">ไม่มีเรียน</div>
+            </div>
+        </div>
+    </div>
 </body>
- 
 </html>
