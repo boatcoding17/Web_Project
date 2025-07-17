@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slider Full</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slider-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%; 
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      object-fit: contain; 
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      opacity: 1;
+      background-color: #22c55e; /* สีเขียว */
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- สไลด์โชว์ -->
+  <div class="slider-wrapper w-full max-w-6xl mx-auto mt-4 aspect-[16/9] bg-black rounded-lg shadow-lg">
+    <div class="slider" id="slider">
+      <img src="menu/image/sl1.jpg" alt="1" />
+      <img src="menu/image/sl2.jpg" alt="2" />
+      <img src="menu/image/sl3.jpg" alt="3" />
+      <img src="menu/image/sl4.png" alt="4" />
+    </div>
+    <!-- จุดเลื่อน -->
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const slider = document.getElementById('slider');
+    const dotsContainer = document.getElementById('dots');
+    const totalSlides = 4;
+    let current = 0;
+
+    // สร้าง dot
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => moveToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    function moveToSlide(index) {
+      current = index;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
+
+    function updateDots() {
+      document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+      });
+    }
+
+    // Auto slide
+    setInterval(() => {
+      current = (current + 1) % totalSlides;
+      moveToSlide(current);
+    }, 5000); // ทุก 5 วินาที
+  </script>
+</body>
+</html>
