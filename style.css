@@ -1,0 +1,22 @@
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #d1d5db;
+  cursor: pointer;
+}
+.dot.active {
+  opacity: 1;
+  background-color: #22c55e;
+}
+.slide-img {
+  width: 25%;
+  object-fit: contain;
+}
+.clip-triangle {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
