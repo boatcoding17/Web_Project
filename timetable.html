@@ -8,6 +8,7 @@
     <style>
         /* กำหนดเอง*/
         .time-slot {
+            position: relative; /* Add this to allow fine-tuned positioning */
             grid-row-start: var(--row-start);
             grid-row-end: var(--row-end);
             grid-column-start: var(--col-start);
@@ -29,19 +30,17 @@
             <div class="bg-white p-2 font-bold text-center text-sm">พฤหัสบดี</div>
             <div class="bg-white p-2 font-bold text-center text-sm">ศุกร์</div>
 
-            <!-- Time Slots  -->
-            <div class="bg-white p-2 text-center text-xs col-start-1">08:00</div> <!--here-->
-            <div class="bg-white p-2 text-center text-xs col-start-1">09:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">10:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">11:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">12:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">13:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">14:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">15:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">16:00</div>
-            <div class="bg-white p-2 text-center text-xs col-start-1">17:00</div>
-            
-
+            <!-- Time Slots คือแถวเวลา  -->
+            <div class="bg-white p-4 text-center text-xs col-start-1">08:00<br>09:00</div> 
+            <div class="bg-white p-4 text-center text-xs col-start-1">09:00<br>10:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">10:00<br>11:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">11:00<br>12:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">12:00<br>13:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">13:00<br>14:00</div> 
+            <div class="bg-white p-4 text-center text-xs col-start-1">14:00<br>15:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">15:00<br>16:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">16:00<br>17:00</div>
+            <div class="bg-white p-4 text-center text-xs col-start-1">17:00<br>18:00</div>
             <!-- ขนาดแถวGrid-->
             <div class="col-start-2 row-start-2 row-span-10 bg-gray-50"></div>
             <div class="col-start-3 row-start-2 row-span-10 bg-gray-50"></div>
@@ -50,37 +49,102 @@
             <div class="col-start-6 row-start-2 row-span-10 bg-gray-50"></div>
 
             <!-- ส่วนของการทำชื่อวิชาวันจันทร์ -->
-            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 3; --row-end: 7;">
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start: 3; --row-end: 6; ;">
                 <p class="font-bold text-sm text-center">10301231</p>
                 <p class="text-xs text-center">(3) 1,Lab คอม3-4</p>
+                <p class="text-xs text-center">09:30 - 12:00</p>
+                <p class="text-xs text-center">ห้อง 105</p>
+            </div>
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 2; --row-start:7 ; --row-end: 9; ;">
+                <p class="font-bold text-sm text-center">10301222</p>
+                <p class="text-xs text-center">(3) 1, Lab คอม3-4</p>
+                <p class="text-xs text-center">13:00 - 15:00</p> 
                 <p class="text-xs text-center">ห้อง 105</p>
             </div>
 
-
-            <div class="time-slot bg-green-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 4; --row-end: 6;">
-                <p class="font-bold text-sm text-center">Data Structures</p>
-                <p class="text-xs text-center">CS211</p>
-                <p class="text-xs text-center">Room 404</p>
+             <!-- ส่วนของการทำชื่อวิชาวันอังคาร -->
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 2; --row-end: 4;">
+                <p class="font-bold text-sm text-center">10301231</p>
+                <p class="text-xs text-center">(3)1,Lab คอม3-4</p>
+                <p class="text-xs text-center">8:00-10:00</p>
+                <p class="text-xs text-center">ห้อง 105</p>
             </div>
-             <div class="time-slot bg-yellow-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 4; --row-start: 7; --row-end: 9;">
-                <p class="font-bold text-sm">Algorithms</p>
-                <p class="text-xs">CS312</p>
-                <p class="text-xs">Room 501</p>
+            
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 4; --row-end: 6;">
+                <p class="font-bold text-sm text-center">10700313</p>
+                <p class="text-xs text-center">(3)2,80-501</p>
+                <p class="text-xs text-center">10:00-12:00</p>
+                <p class="text-xs text-center">ห้อง 147</p>
             </div>
-        </div>
+             
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 6; --row-end: 8; top:20%;">
+                <p class="font-bold text-sm text-center">10301225</p>
+                <p class="text-xs text-center">(3)1,Lab คอม3-4</p>
+                <p class="text-xs text-center">12:30-14:30</p>
+                <p class="text-xs text-center">ห้อง 105</p>
+            </div>
+            
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 3; --row-start: 9; --row-end: 10;">
+                <p class="font-bold text-sm text-center">10301211</p>
+                <p class="text-xs text-center">(3)1,3203</p>
+                <p class="text-xs text-center">15:00-16:00</p>
+                <p class="text-xs text-center">ห้อง 141</p>
+            </div>
+        
 
-        <!-- Timetable สำหรับมือถือ screens -->
+            <!-- ส่วนของการทำชื่อวิชาวันพุธ -->
+             <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 4; --row-start: 3; --row-end: 6; ">
+                <p class="font-bold text-sm text-center">10301225</p>
+                <p class="text-xs text-center">(3)1,3203</p>
+                <p class="text-xs text-center">09:30 - 12:00</p>
+                <p class="text-xs text-center">ห้อง 141</p>
+            </div>
+
+            <!-- ส่วนของการทำชื่อวิชาวันพฤหัสบดี -->
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 5; --row-start: 3; --row-end: 6; ">
+                <p class="font-bold text-sm text-center">10301222</p>
+                <p class="text-xs text-center">(3)1,Labคอม3-4</p>
+                <p class="text-xs text-center">09:00 - 12:00</p>
+                <p class="text-xs text-center">ห้อง 105</p> 
+            </div>
+
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 5; --row-start: 7; --row-end: 9; ">
+                <p class="font-bold text-sm text-center">10301222</p>
+                <p class="text-xs text-center">(3)1,Labคอม3-4</p>
+                <p class="text-xs text-center">13:00 - 15:00</p>
+                <p class="text-xs text-center">ห้อง 105</p> 
+            </div>
+
+            <!-- ส่วนของการทำชื่อวิชาวันศุกร์ -->
+             <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 6; --row-start: 3; --row-end: 4; ">
+                <p class="font-bold text-sm text-center">10301211</p>
+                <p class="text-xs text-center">(3)1,3203</p>
+                <p class="text-xs text-center">09:00 - 10:00</p>
+                <p class="text-xs text-center">ห้อง 141</p> 
+            </div>
+
+            <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 6; --row-start: 4; --row-end: 6; ">
+                <p class="font-bold text-sm text-center">10700313</p>
+                <p class="text-xs text-center">(3)2,80-501</p>
+                <p class="text-xs text-center">10:00 - 12:00</p>
+                <p class="text-xs text-center">ห้อง 147</p> 
+            </div>
+            
+              <div class="time-slot bg-blue-200 p-2 rounded-lg shadow m-1 flex flex-col justify-center" style="--col-start: 6; --row-start: 7; --row-end: 10; ">
+                <p class="font-bold text-sm text-center">10301223</p>
+                <p class="text-xs text-center">(3)1,Labคอม3-4</p>
+                <p class="text-xs text-center">13:00 - 16:00</p>
+                <p class="text-xs text-center">ห้อง 105</p> 
+            </div>
+            
+            <!-- Timetable สำหรับมือถือ screens -->
         <div class="lg:hidden space-y-4">
             <!-- วันจันทร์ -->
             <div>
                 <h2 class="font-bold text-lg text-gray-700 mb-2">จันทร์</h2>
-                <div class="bg-white p-4 rounded-lg shadow mb-2">
-                    <p class="font-bold">Mobile First (CS321)</p>
-                    <p class="text-sm text-gray-600">08:00 - 10:00 | Room 123</p>
-                </div>
                 <div class="bg-white p-4 rounded-lg shadow">
-                    <p class="font-bold">Database Systems (CS345)</p>
-                    <p class="text-sm text-gray-600">09:00 - 11:00 | Room 124</p>
+                    <p class="font-bold">10301231</p>
+                    <p class="text-sm text-gray-600">09:30 - 12:30 | (3) 1,Lab คอม3-4 | ห้อง 105</p>
                 </div>
             </div>
             <!-- อังคาร -->
