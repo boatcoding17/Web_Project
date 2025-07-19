@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มหาวิทยาลัยแม่โจ้</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- เรียกใช้งาน Tailwind CSS -->
+</head>
+
+<body class="min-h-screen flex flex-col bg-green-100 text-gray-900">
+
+    <header class="bg-green-100 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="./menu/image/mjulogo1.png" alt="โลโก้" class="h-12 w-auto" />
+                <select id="menuSelect" onchange="location = this.value;" class="text-center  border-2 border-black-300">
+                    <option value="menu.html">เมนู</option>
+                    <option value="timetable.html">ตารางเรียน/สอบ</option>
+                    <option value="calendar.html">ปฏิทินการศึกษา</option>
+                </select>
+        </div>
+    </header>
+  
+  <div style="background-color: #2b8144; height: 18px;"></div>
+
+    <main class="flex-grow p-2 md:p-4 flex justify-center items-start">
+        <div class="w-full max-w-4xl mt-2 bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-4 bg-green-700 text-white text-center text-2xl font-bold">
+                ตารางข้อมูลอาคาร/สถานที่
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 border border-gray-300">
+                    <thead>
+                        <tr class="hover:bg-cyan-300">
+                            <th scope="col"
+                                class="border border-gray-300 dark:border-gray-600 px-6 py-3 text-center text-base font-semibold text-blck-600 uppercase tracking-wider border-r border-gray-300 bg-blue-400">
+                                รหัสอาคาร
+                            </th>
+                            <th scope="col"
+                                class="border border-gray-300 dark:border-gray-600 px-6 py-3 text-center text-base font-semibold text-blck-600 uppercase tracking-wider bg-blue-400">
+                                สถานที่
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-cyan-300">
+                            <td colspan="2"
+                                class="px-6 py-2 text-center  font-bold bg-green-300 text-slate-950 border border-black">
+                                มหาวิทยาลัยแม่โจ้ เชียงใหม่
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                000</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ประกาศภายหลัง
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                101
+                            </td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารพัฒนาวิศัยทัศน์
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                102</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ประเสริฐ ณ นคร</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                103</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                สมิตตานนท์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                104</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะวิศวกรรมและอุตสาหกรรมเกษตร
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                105</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะวิทยาศาสตร์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                106</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                107</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะบริหารธุรกิจ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                108</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ภาควิชาทรัพยากรดินและสิ่งแวดล้อม</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                109</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเทคโนโลยีภูมิทัศน์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                110</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ศูนย์กีฬาเฉลิมพระเกียรติ (โซน
+                                B)</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                111</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ศูนย์กล้วยไม้และไม้ดอกไม้ประดับ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                112</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะสัตวศาสตร์และเทคโนโลยี</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                113</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารกำจรบุญแปง</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                114</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเมล็ดพันธุ์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                115</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคารไม้ผล
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                116</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารพืชผัก</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                117</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเนื้อเยื่อ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                118</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">ภาควิชา
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                119</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">TBA</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                120</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">ภาคพืชไร่
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                121</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเทคโนโลยีชีวภาพ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                122</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคาร 77
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                123</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ภาควิชาพืชสวน</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                124</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารสุวรรณวาจกกิสิกิจ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                125</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารแม่โจ้ 70 ปี :
+                                สร้างปัญญาเพื่อแผ่นดิน</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                126</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารปฏิบัติการรวมทางพืช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                127</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารหม่อนไหม</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                128</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์ฯ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                129</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเฉลิมพระเกียรติสมเด็จพระเทพฯ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                130</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคารไม้ผล
+                                2</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                140</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเศรษฐศาสตร์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                141</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารจุฬาภรณ์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                142</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคารเทพ
+                                พงษ์พานิช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                143</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคาร 75
+                                ปี
+                                (คณะสารสนเทศแลการสื่อสาร)</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                144</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                สระว่ายน้ำอุบุลรัตนราชกัญญา
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                145</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                วิทยาลัยพลังงานทดแทน</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                146</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเทอดกสิกร</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                147</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเรียนรวม 80 ปี</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                148</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเรียนรวมคณะสถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                149</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารศูนย์ภาษา</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                150</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารพยาบาลศาสตร์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                151</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ศูนย์เรียนรู้เทคโนโลยีการควบคุมศัตรูพืชโดยชีววิธี (ฟาร์มมหาวิทยาลัย)</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                152</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                การเรียนการสอนแบบออนไลน์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                153</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเรียนรวมและปฏิบัติการ
+                                คณะสัตวแพทยศาสตร์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                154</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารปฏิบัติการโรงพยาบาลสัตว์
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-cyan-300">
+                            <td colspan="2"
+                                class="px-6 py-2 text-center  font-bold bg-green-300 text-slate-950 border border-black">
+                                วิทยาเขต วิทยาลัยบริหารศาสตร์
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                106</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ภาควิชาเทคโนโลยีการประมง</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                107</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                คณะธุรกิจการเกษตร</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                112</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารภาควิชาเทคโนโลยีทางสัตว์
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-cyan-300">
+                            <td colspan="2"
+                                class="px-6 py-2 text-center  font-bold bg-green-300 text-slate-950 border border-black">
+                                วิทยาเขต แพร่
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                801</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารพลังแม่โจ้สามัคคี</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                802</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคารนำชัย
+                                ทนุผล</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                803</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารปฏิบัติการทางวิทยาศาสตร์และเทคโนโลยีอุตสาหกรรมเกษตร</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                804</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารนำร่องและอุตสาหกรรมฯ</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                805</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มเทคโนโลยีการผลิตสัตว์
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                806</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มเทคโนโลยีการผลิตพืช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                807</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มเกษตรป่าไม้</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                808</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ศูนย์ประสานงาน</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                809</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มสัตว์ปีก</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                810</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">ฟาร์มสุกร
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                811</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคารเทพ
+                                พงษ์พานิช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                812</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเกษตรป่าไม้</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                813</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเทคโนโลยีการผลิตพืช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                814</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารเทคโนโลยีการผลิตสัตว์
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                815</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารศาสตร์พระราชา</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                816</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">Shop
+                                เทคโนโลยีอุตสาหกรรมป่าไม้
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                TBA</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">TBA</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                สนามกีฬา</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">สนามกีฬา
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-cyan-300">
+                            <td colspan="2"
+                                class="px-6 py-2 text-center  font-bold bg-green-300 text-slate-950 border border-black">
+                                วิทยาเขต ชุมพร
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                701</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารบุญรอด ศุภอุดมฤกษ์</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                702</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารแม่โจ้สามัคคี</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                703</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">โรงน้ำจืด
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                704</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">โรงน้ำเค็ม
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                705</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                แปลงดอกหน้าวัว</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                706</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">สนามกีฬา
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                707</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">นอกสถานที่
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                708</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มเทคโนโลยีการผลิตพืช</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                709</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                ฟาร์มการประมง(การเพาะเลี้ยงสัตว์น้ำ)</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                710</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">แปลงพืชไร่
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                711</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">แปลงไม้ผล
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                712</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">แปลงไม้ดอก
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                713</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคาร
+                                Cowboy</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                714</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                โครงการศูนย์การศึกษาสัญจร</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                715</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">อาคาร
+                                Cowboy</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                716</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารแม่โจ้ 80 ปี</td>
+                        </tr>
+                        <tr class="hover:bg-cyan-300">
+                            <td
+                                class="px-6 py-2 whitespace-nowrap text-sm text-blue-700 border border-black text-center">
+                                717</td>
+                            <td class="px-6 py-2 whitespace-nowrap text-sm text-gray-900 border border-black">
+                                อาคารปฏิบัติงานด้านวิทยาศาสตร์และเทคโนโลยี</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white text-center py-6 shadow-inner">
+        <p>&copy; 2025 MySite. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

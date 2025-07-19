@@ -14,6 +14,7 @@
             grid-column-start: var(--col-start);
         }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 p-4 sm:p-6">
  
@@ -47,7 +48,7 @@
       <div class="bg-white p-6 rounded-xl shadow-md">
         
         <h3 class="text-base sm:text-lg md:text-xl font-bold text-green-700">
-            <a href="######" class="hover:underline">ตารางการใช้ห้อง</a>
+            <a href="room377.html" class="hover:underline">ตารางการใช้ห้อง</a>
       </h3>
             <p class="text-sm sm:text-base text-gray-600 mt-1">ตารางการใช้ห้องสำหรับนักศึกษาและอาจารย์</p>
       </div>
@@ -279,8 +280,9 @@
     <!--ตารางสอบ-->
 <h1 class="text-center mt-4 mb-4 font-bold text-2xl ">ตารางสอบ</h1>
 <div class="p-5 h-screen bg-gray-100 max-w-7xl mx-auto ">
-    <!--ส่วนตารางทั้งหมด--> 
-    <table class="mx-auto w-full rounded-md overflow-auto shadow-md border-collapse table-auto">
+    
+    <!--ส่วนตารางทั้งหมดของตารางสอบ--> 
+    <table class="hidden lg:table mx-auto w-full rounded-md overflow-auto shadow-md border-collapse table-auto mb-0">
         <thead class="bg-gray-50 border-b border-gray-300">
             <tr class="border border-gray-300">
                 <th class="p-4 text-sm border border-gray-300 text-gray-600">รหัสวิชา</th>
@@ -342,8 +344,72 @@
 
     </tbody>
 </table>
-<h1 class="mt-2 text-center ">หมายเหตุ   C = Lecture  L = Lab  R = ประชุม  S = Self Study  T = ติว</h1>
-</div>
+ <h1 class="text-center hidden sm:block mt-5 font-bold">
+  หมายเหตุ C = Lecture L = Lab R = ประชุม S = Self Study T = ติว
+</h1>
+<!--ตารางสอบ หน้าจอมือถือ-->
+<div class="lg:hidden space-y-6">
+            <div>
+                <h2 class="font-bold text-xl text-gray-700 mb-3">วันที่</h2>
+                <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา: 10301211 (กลุ่ม 1)</p>
+                        <p class="text-sm text-gray-600">วันที่ (c)22 ส.ค. 2568 (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:08:00-11:00 N/A</p>
+                        <p class="text-sm text-gray-600">คณิตศาสตร์สำหรับวิทยาการคอมพิวเตอร์<br>Mathematics for Computer Science</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา: 10301222 (กลุ่ม 1)</p>
+                        <p class="text-sm text-gray-600">วันที่ (C) 18 ส.ค. 2568 (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:12:00-15:00 N/A </p>
+                        <p class="text-sm text-gray-600">โครงสร้างข้อมูลและอัลกอริทึม<br>Data Structure and Algorithm</p>
+                    </div>
+                </div>
+            </div>
+            
+             <div>
+                <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา: 10301223  (กลุ่ม 1)</p>
+                        <p class="text-sm text-gray-600">วันที่ (C) 20 ส.ค. 2568 (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:15:30-18:30 N/A</p>
+                        <p class="text-sm text-gray-600">ฐานข้อมูลโครงสร้างเชิงสัมพันธ์<br>Structure Relational Database</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา: 10301225  (กลุ่ม 1)</p>
+                        <p class="text-sm text-gray-600">วันที่:-- (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:--</p>
+                        <p class="text-sm text-gray-600">วิศวกรรมซอฟต์แวร์<br>Software Engineering</p>
+                    </div>
+            </div>
+            
+            <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา: 10301223  (กลุ่ม 1)</p>
+                        <p class="text-sm text-gray-600">วันที่-- (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:-- </p>
+                        <p class="text-sm text-gray-600">เว็บเทคโนโลยี<br>Web Technology</p>
+                    </div>
+            </div>
+    
+             <div class="space-y-3">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <p class="font-bold">หรัสวิชา:  10700313   (กลุ่ม 2)</p>
+                        <p class="text-sm text-gray-600">วันที่-- (กลางภาค)</p>
+                        <p class="text-sm text-gray-600">เวลา:-- </p>
+                        <p class="text-sm text-gray-600">ภาษาอังกฤษเชิงวิทยาศาสตร์และนวัตกรรม<br>English for Science and Innovation</p>
+                    </div>
+            </div>
+    </div>
 </body>
 </html>
 
