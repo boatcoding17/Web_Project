@@ -1,9 +1,16 @@
 {
-  "version": 1,
+  "version": 2,
   "builds": [
     {
-      "src": "public/**/*",
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.{css,js,png,jpg,jpeg,gif,svg}",
       "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/menu.html" }
   ]
 }
