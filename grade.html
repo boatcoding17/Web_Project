@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>มหาวิทยาลัยแม่โจ้ Maejo Universcity</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+ 
+<body class="">
+   <header class="bg-green-400 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="./menu/image/mjulogo1.png" alt="โลโก้" class="h-12 w-auto" />
+      <button class="p-2 border-2 border-green-600 rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+    <div class="max-w-5xl mx-auto mt-10 px-4">
+    <h2 class="text-2xl font-bold mb-6 text-center"> บันทึกเกรดรายบุคคล</h2>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border-collapse text-sm text-center shadow-md">
+        <thead class="bg-gray-200">
+            <tr>
+            <th class="border px-4 py-2">ลำดับ</th>
+            <th class="border px-4 py-2">รหัสนิสิต</th>
+            <th class="border px-4 py-2">ชื่อ-สกุล</th>
+            <th class="border px-4 py-2">คะแนน (100)</th>
+            <th class="border px-4 py-2">เกรด</th>
+            </tr>
+        </thead>
+            <tbody>
+                <!-- นักศึกษาคนที่ 1 -->
+                <tr class="hover:bg-gray-50">
+                    <td class="border px-4 py-2">1</td>
+                    <td class="border px-4 py-2">65123456</td>
+                    <td class="border px-4 py-2 text-left">นางสาวพิมพ์ดาว แสงทอง</td>
+                    <td class="border px-4 py-2">
+                        <input type="number" min="0" max="100" class="w-20 px-2 py-1 border rounded text-center" />
+                    </td>
+                    <td class="border px-4 py-2">
+                        <select class="px-2 py-1 border rounded">
+                        <option value="">-</option>
+                        <option>A</option>
+                        <option>B+</option>
+                        <option>B</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D+</option>
+                        <option>D</option>
+                        <option>F</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- นักศึกษาคนที่ 2 -->
+                <tr class="hover:bg-gray-50">
+                    <td class="border px-4 py-2">2</td>
+                    <td class="border px-4 py-2">65123457</td>
+                    <td class="border px-4 py-2 text-left">นายกิตติคุณ นานา</td>
+                    <td class="border px-4 py-2">
+                        <input type="number" min="0" max="100" class="w-20 px-2 py-1 border rounded text-center" />
+                    </td>
+                    <td class="border px-4 py-2">
+                        <select class="px-2 py-1 border rounded">
+                        <option value="">-</option>
+                        <option>A</option>
+                        <option>B+</option>
+                        <option>B</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D+</option>
+                        <option>D</option>
+                        <option>F</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <div class="text-center mt-6">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                บันทึกทั้งหมด
+            </button>
+
+        </div>
+    </div>
+</body>

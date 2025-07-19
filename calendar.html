@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>มหาวิทยาลัยแม่โจ้ Maejo Universcity</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  
+  <body class="bg-green-300">
+    <header class="bg-green-100 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <img src="./menu/image/mjulogo1.png" alt="โลโก้" class="h-12 w-auto" />
+        <button class="p-2 border-2 border-green-600 rounded-md">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="max-w-full mx-auto bg-white p-6 rounded border border-gray-300">
+
+      <!-- ส่วนหัว -->
+      <div class="mb-6 text-center ">
+        <h1 class="text-3xl font-bold text-blue-700 p-4">📘 ปฏิทินการศึกษา</h1>
+        <select id="calendarSet" class="w-full max-w-xs mx-auto border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 hover:bg-gray-100">
+          <option value="1001">1001 : ปริญญาตรี ปกติ</option>
+          <option value="1002">1002 : ปริญญาโท ปกติ</option>
+          <option value="1003">1003 : ปริญญาตรี ภาคพิเศษ</option>
+        </select>
+      </div>
+
+      <div class="flex justify-center items-center space-x-2 mb-6">
+        <button  class="px-2 py-1 rounded hover:bg-gray-300">&lt;</button>
+        <p>ปีการศึกษา 2568</p>
+        <button  class="px-2 py-1 rounded hover:bg-gray-300">&gt;</button>
+      </div>
+
+      <!-- เนื้อหา -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-800">
+        
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ลงทะเบียนปกติ (on-line)</h2>
+          <p>17-20 มิ.ย. 2568</p>
+          <ul class="list-disc list-inside mt-1">
+            <li>ปี 1: 18 มิ.ย.</li>
+            <li>ปี 2: 19 มิ.ย.</li>
+            <li>ปี 3-4/อื่นๆ: 20 มิ.ย.</li>
+          </ul>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">เปิดภาคเรียน</h2>
+          <p>23 มิ.ย. 2568 - 8:00 น.</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">เพิ่ม/ลด/เปลี่ยนกลุ่ม</h2>
+          <p>23-25 มิ.ย. 2568</p>
+          <ul class="list-disc list-inside mt-1">
+            <li>เพิ่ม/ลด/เปลี่ยนกลุ่ม</li>
+            <li>ลดรายวิชา : 12-25 มิ.ย.</li>
+          </ul>
+        </div>
+
+        <div class="shadow-md rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ลงทะเบียนล่าช้า</h2>
+          <p>23-25 มิ.ย. 2568</p>
+          <p>เทียบโอน: 17-25 มิ.ย.</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ชำระเงิน</h2>
+          <p>30 มิ.ย. - 6 ก.ค. 2568</p>
+          <ul class="list-disc list-inside mt-1">
+            <li>ธนาคารกรุงไทย</li>
+          </ul>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">พิมพ์ใบแจ้งหนี้</h2>
+          <p>30 มิ.ย. - 6 ก.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">แจ้งคาดว่าจะจบ</h2>
+          <p>14 ก.ค. - 14 ต.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">รักษาสภาพ/ลาพัก</h2>
+          <p>23 มิ.ย. - 23 ก.ค. 2568</p>
+          <p>แก้ I: 23 ก.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ไหว้ครู</h2>
+          <p>24 ก.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ถอนรายวิชา (W)</h2>
+          <p>7 ก.ค. - 9 ก.ย. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">สอบกลางภาค</h2>
+          <p>18 - 24 ส.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">วันสุดท้ายเรียน</h2>
+          <p>12 ต.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">สอบปลายภาค</h2>
+          <p>14 - 27 ต.ค. 2568</p>
+        </div>
+
+        <div class="shadow-md border-gray-300 rounded p-3">
+          <h2 class="font-semibold text-blue-600 mb-1">ปิดภาคการศึกษา</h2>
+          <p>28 ต.ค. 2568</p>
+          <ul class="list-disc list-inside mt-1">
+            <li>ส่งผล: 6 พ.ย.</li>
+            <li>ประกาศผล: 7 พ.ย.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+ 
+</html>
