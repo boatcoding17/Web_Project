@@ -6,15 +6,23 @@
   <title>มหาวิทยาลัยแม่โจ้</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="">
 </head>
 
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Header -->
   <header class="bg-green-100 shadow-md">
+    <!-- ส่วนหัว (Header) พื้นหลังสีเขียวอ่อน และมีเงา (shadow) -->
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- กล่องที่อยู่ตรงกลางของหน้าเว็บ (max-w-7xl = กว้างสูงสุด)
+           mx-auto = จัดกึ่งกลางแนวนอน
+           px-4 py-4 = padding ซ้าย-ขวาและบน-ล่าง
+           flex = ใช้ Flexbox
+           justify-between = ช่องว่างระหว่างโลโก้กับปุ่ม
+           items-center = จัดแนวให้อยู่กึ่งกลางแนวตั้ง -->
       <img src="./menu/image/mjulogo1.png" alt="โลโก้" class="h-12 w-auto" />
+           <!--h-12 = ความสูง 3rem (48px)
+           w-auto = กว้างอัตโนมัติ (ไม่บิดภาพ) -->
       <button class="p-2 border-2 border-green-600 rounded-md">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
@@ -29,39 +37,63 @@
 
   <!-- สไลด์ -->
  <div class=" w-full max-w-full xl:max-w-screen-full  overflow-hidden relative shadow-lg slider-wrapper">
-    <div id="slider" class="slide-track w-[400%] h-full">
+    <div id="slider" class="slide-track w-[400%] h-full">  <!--="slider" = ระบุ ID เพื่อใช้กับ JavaScript ควบคุมการเลื่อน-->
       <img src="./menu/image/sl1.jpg" class="slide-img" />
       <img src="./menu/image/sl2.jpg" class="slide-img" />
       <img src="./menu/image/sl3.jpg" class="slide-img" />
       <img src="./menu/image/sl4.png" class="slide-img" />
+      <!-- 
+    w-full = กว้างเต็ม 100%
+    max-w-full = กว้างสูงสุดไม่เกิน 100% ของพื้นที่ที่มี
+    xl:max-w-screen-full = กำหนดให้กว้างเต็มหน้าจอเมื่ออยู่ที่ขนาด xl (>=1280px)
+    overflow-hidden = ซ่อนเนื้อหาที่เกินจากขอบ (เพื่อให้สไลด์เลื่อนแบบซ่อนไม่ให้เกินออกมา)
+    relative = ตำแหน่งแบบ relative (ใช้สำหรับจัดตำแหน่งขององค์ประกอบภายใน)
+    shadow-lg = ใส่เงาแบบใหญ่ให้กล่อง
+    slider-wrapper = คลาสกำหนดชื่อเพิ่มเติม 
+  -->
     </div>
 
     <!-- Dots -->
+    <!-- ปุ่มแต่ละจุด ใช้ควบคุมภาพที่จะแสดง -->
     <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-      <button class="dot active" data-index="0"></button>
-      <button class="dot" data-index="1"></button>
+      <button class="dot active" data-index="0"></button> <!--class="dot active" = จุดที่กำลังแสดงอยู่ จะมีคลาส active เพื่อแสดงว่าเป็นภาพปัจจุบัน-->
+      <button class="dot" data-index="1"></button> <!-- data-index = ระบุตำแหน่งของภาพ (ใช้ร่วมกับ JavaScript เพื่อเปลี่ยนภาพ)-->
       <button class="dot" data-index="2"></button>
       <button class="dot" data-index="3"></button>
     </div>
 
     <!-- Arrows -->
+     <!-- ปุ่มลูกศรย้อนกลับ (ซ้าย) -->
     <button id="prevBtn" class="absolute top-1/2 left-3 -translate-y-1/2 bg-white rounded-full p-1 shadow">
-      <svg class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">  <!-- ไอคอนลูกศรซ้าย (SVG) -->
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
-    <button id="nextBtn" class="absolute top-1/2 right-3 -translate-y-1/2 bg-white rounded-full p-1 shadow">
-      <svg class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button id="nextBtn" class="absolute top-1/2 right-3 -translate-y-1/2 bg-white rounded-full p-1 shadow"> <!-- ปุ่มลูกศรถัดไป (ขวา) -->
+      <svg class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><!-- ไอคอนลูกศรขวา (SVG) -->
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
   </div>
 
   <!-- Section: Cards_hyperlink -->
+   <!-- Section ครอบทั้งหมด -->
   <section class="pt-2 pb-6 px-4 max-w-full lg:max-w-6xl xl:max-w-7xl mx-auto">
+     <!-- 
+    pt-2 pb-6 = padding ด้านบน 0.5rem (8px), ด้านล่าง 1.5rem (24px)
+    px-4 = padding ซ้าย-ขวา 1rem (16px)
+    max-w-full = กว้างไม่เกิน 100%
+    lg:max-w-6xl = กว้างสุดที่ 6xl เมื่อหน้าจอใหญ่ (≥1024px)
+    xl:max-w-7xl = กว้างสุดที่ 7xl เมื่อหน้าจอใหญ่มาก (≥1280px)
+    mx-auto = จัดให้อยู่กึ่งกลางแนวนอน
+  -->
     
     <div class="grid grid-cols-2 gap-4 sm:gap-6">
-      
+      <!-- 
+    grid = เปิดระบบ Grid Layout
+    grid-cols-2 = แบ่งเป็น 2 คอลัมน์
+    gap-4 = กำหนดช่องว่างระหว่างกล่อง (ทั้งแนวนอนและแนวตั้ง) = 1rem หรือ 16px
+  -->
       <div class="bg-white p-6 rounded-xl shadow-md">
         
         <h3 class="text-base sm:text-lg md:text-xl font-bold text-green-700">
@@ -79,7 +111,7 @@
             <p class="text-sm sm:text-base text-gray-600 mt-1">ตารางการใช้ห้องสำหรับนักศึกษาและอาจารย์</p>
       </div>
       
-      <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="bg-white p-6 rounded-xl shadow-md"> <!-- p-6 = padding รอบขอบกล่อง 1.5rem-->
         <h3 class="text-base sm:text-lg md:text-xl font-bold text-green-700"> 
             <a href="calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
         </h3>
